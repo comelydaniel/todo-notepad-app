@@ -1,0 +1,104 @@
+body {
+    background-color: rgb(103, 159, 231);
+}
+
+nav {
+    background: transparent;
+}
+
+nav .nav-item.current {
+    border-bottom: 5px solid rgb(131, 53, 53) ;
+}
+
+nav .nav-item {
+    font-weight: 700;
+    font-size: 24px;
+    text-decoration: none;
+    color: rgb(131, 53, 53);
+}
+
+#todo-category {
+    width: 25%;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    padding: 8px 0px;
+}
+
+.active-category {
+    color: #fff !important;
+}
+
+#main-list {
+    background-color: #fff;
+    width: 40%;
+    transform: translate(-20%, 30%);
+}
+
+#main-list .delete-buttons {
+    background: rgb(131, 53, 53);
+    color: #fff;
+    font-size: 18px;
+}
+
+input, button {
+    background: transparent;
+    border: none;
+    outline: none;
+    padding-top: 8px;
+}
+
+label, li {
+    font-size: 21px;
+    font-weight: 600;
+}
+
+input[type=checkbox]:checked + label {
+    color: rgb(55, 55, 231);
+    text-decoration: line-through;
+}
+
+input[type=text] {
+    border-bottom: 2px solid black;
+    transform: translateY(-80%);
+    transition: transform 0.8s ease-in;
+}
+
+input[type=text]:focus {
+    transform: translateY(2%);
+}
+
+
+@media (max-width: 769px) {
+    #main-list {
+        width:50%;
+        transform: translateY(30%);
+    }
+}
+
+@media (max-width: 426px) {
+    #todo-category {
+        width: 100%;
+    }
+
+    #main-list {
+        width: 100%;
+        transform: translateY(0%);
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+
+    #todo {
+        flex-direction: column;
+    }
+
+    nav .nav-item.current .arrow-current {
+        display: none;
+    }
+}

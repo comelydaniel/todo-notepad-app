@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/todo.css">
+    <title>Todo App</title>
+</head>
+<body>
+    <header class="container-fluid">
+        <nav>
+            <div class="py-2 pt-md-5 ps-3">
+                <a href="todo.html" class="nav-item current">Todo</a>
+                <a href="note.html" class="nav-item">Notepad</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="container">
+            <div>
+                <h1>TODO APP</h1>
+                <h2>Welcome <span id="user"></span> </h2>
+            </div>
+        </section>
+        <section id="todo" class="container-fluid d-flex justify-content-md-evenly py-md-5 mb-3">
+            <div id="todo-category" class="my-md-5 py-3 ps-3">
+                <div >
+                    <ul id="category-list"></ul>
+                </div>
+                <div class="category-form">
+                    <form action="" id="category-form">
+                        <label>
+                            Input your todo category here <br>
+                            <input type="text" id="input-category" class="input ">
+                        </label>
+                    </form>
+                </div>
+            </div>
+            <div id="main-list" class="my-md-5 py-3 px-3 ms-md-5 ms-lg-0">
+                <div class="category-select d-flex justify-content-between">
+                    <h2 id="category-title"></h2>
+                    <h6 id="task-count"></h6>
+                </div>
+                <hr>
+                <div id="main-container">
+                    <div id="todo-list"></div>
+                    <div class="todo-form">
+                        <form action="" id="task-form">
+                            <label>
+                                Input your todo here <br>
+                                <input type="text" id="input-todo" class="input">
+                            </label>
+                        </form>
+                    </div>
+                </div>
+                <div class="delete-buttons d-flex justify-content-evenly pt-3 mt-3">
+                    <p id="clear-checked">Clear Checked Tasks</p>
+                    <p id="delete-category">Delete Task Category</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <Template id="task-template">
+        <div class="todo-item me-3">
+            <input type="checkbox" name="todo">
+            <label>
+                <span id="task-checked"></span>
+            </label>
+        </div>
+    </Template>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/todo.js"></script>
+</body>
+</html>
